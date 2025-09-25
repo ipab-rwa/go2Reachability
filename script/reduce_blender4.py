@@ -50,6 +50,14 @@ def load_obj(file):
 
     # Decimate mesh
     decimate(obj)
+    
+    
+    # Clean geometry: delete faces and build convex hull
+    bpy.ops.object.mode_set(mode="EDIT")
+    bpy.ops.mesh.delete(type="EDGE_FACE")
+    bpy.ops.mesh.select_all(action="SELECT")
+    bpy.ops.mesh.convex_hull()
+    bpy.ops.object.mode_set(mode="OBJECT")
 
     # Prepare output name and path
     name_base = safe_base_name(file)

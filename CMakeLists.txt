@@ -43,7 +43,7 @@ set(PY_CONFIG_FILE "${CMAKE_CURRENT_BINARY_DIR}/go2ReachabilityConfig.py")
 # On utilise un chemin relatif au prefix pour que ce soit portable
 file(WRITE "${PY_CONFIG_FILE}"
 "import os\n"
-"GO2REACHABILITY_CONSTRAINTS_DIR = os.path.join(os.path.dirname(__file__), 'reachability_constraints')\n"
+"GO2REACHABILITY_CONSTRAINTS_DIR = os.path.join(os.path.dirname(__file__), 'reachability_constraints/')\n"
 )
 
 install(FILES "${PY_CONFIG_FILE}"
