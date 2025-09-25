@@ -222,11 +222,11 @@ for effector, comData, pointsData in zip(effectors, compoints, points):
     hull_to_obj(
         hcom,
         comData,
-        "go2_COM_constraints_in_" + str(effector) + "_effector_frame_quasi_static.obj",
+        "COM_constraints_in_" + str(effector) + "_effector_frame_quasi_static.obj",
     )
     fig = plt.figure()
     fig.suptitle(
-        "go2_COM_constraints_in_" + str(effector) + "_effector_frame_quasi_static.obj",
+        "COM_constraints_in_" + str(effector) + "_effector_frame_quasi_static.obj",
         fontsize=16,
     )
     plot_hull(hcom, comData, np.array(comData), color="r", plot=False, fig=fig, ax=None)
@@ -242,7 +242,7 @@ for effector, comData, pointsData in zip(effectors, compoints, points):
         hull_to_obj(
             hpts,
             pts,
-            "go2_" + str(oEffector) + "_constraints_in_" + str(effector) + ".obj",
+            str(oEffector) + "_constraints_in_" + str(effector) + ".obj",
         )
         ax = plot_hull(hpts, pts, np.array(pts), color="b", plot=False, fig=fig, ax=ax)
     plt.show(block=False)
