@@ -1,0 +1,11 @@
+# --- go2ReachabilityConfig.cmake.in ---
+# Portable config file for go2Reachability
+
+# Path to the directory containing this config file
+get_filename_component(GO2REACHABILITY_CONFIG_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+# Path to reachability constraints relative to config file
+set(GO2REACHABILITY_CONSTRAINTS_DIR "${GO2REACHABILITY_CONFIG_DIR}/../reachability_constraints")
+
+# Mark package as found
+set(GO2REACHABILITY_FOUND TRUE)
